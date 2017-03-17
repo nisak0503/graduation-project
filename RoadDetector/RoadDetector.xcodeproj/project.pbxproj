@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96CB649B1E7B0DD3001BB284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB649A1E7B0DD3001BB284 /* main.m */; };
+		96CB649E1E7B0DD3001BB284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB649D1E7B0DD3001BB284 /* AppDelegate.m */; };
+		96CB64A11E7B0DD3001BB284 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB64A01E7B0DD3001BB284 /* ViewController.m */; };
+		96CB64A41E7B0DD3001BB284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB64A21E7B0DD3001BB284 /* Main.storyboard */; };
+		96CB64A61E7B0DD3001BB284 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB64A51E7B0DD3001BB284 /* Images.xcassets */; };
+		96CB64A91E7B0DD3001BB284 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CB64A71E7B0DD3001BB284 /* LaunchScreen.xib */; };
+		96CB64B51E7B0DD3001BB284 /* RoadDetectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB64B41E7B0DD3001BB284 /* RoadDetectorTests.m */; };
+		96CB64BF1E7B1302001BB284 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB64BE1E7B1302001BB284 /* Annotation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96CB64AF1E7B0DD3001BB284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB648D1E7B0DD3001BB284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB64941E7B0DD3001BB284;
+			remoteInfo = RoadDetector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96CB64951E7B0DD3001BB284 /* RoadDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB64991E7B0DD3001BB284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB649A1E7B0DD3001BB284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96CB649C1E7B0DD3001BB284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96CB649D1E7B0DD3001BB284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96CB649F1E7B0DD3001BB284 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96CB64A01E7B0DD3001BB284 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96CB64A31E7B0DD3001BB284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96CB64A51E7B0DD3001BB284 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		96CB64A81E7B0DD3001BB284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		96CB64AE1E7B0DD3001BB284 /* RoadDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB64B31E7B0DD3001BB284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB64B41E7B0DD3001BB284 /* RoadDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoadDetectorTests.m; sourceTree = "<group>"; };
+		96CB64BE1E7B1302001BB284 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		96CB64C01E7B1343001BB284 /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CB64921E7B0DD3001BB284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB64AB1E7B0DD3001BB284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96CB648C1E7B0DD3001BB284 = {
+			isa = PBXGroup;
+			children = (
+				96CB64971E7B0DD3001BB284 /* RoadDetector */,
+				96CB64B11E7B0DD3001BB284 /* RoadDetectorTests */,
+				96CB64961E7B0DD3001BB284 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96CB64961E7B0DD3001BB284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CB64951E7B0DD3001BB284 /* RoadDetector.app */,
+				96CB64AE1E7B0DD3001BB284 /* RoadDetectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96CB64971E7B0DD3001BB284 /* RoadDetector */ = {
+			isa = PBXGroup;
+			children = (
+				96CB649C1E7B0DD3001BB284 /* AppDelegate.h */,
+				96CB649D1E7B0DD3001BB284 /* AppDelegate.m */,
+				96CB649F1E7B0DD3001BB284 /* ViewController.h */,
+				96CB64A01E7B0DD3001BB284 /* ViewController.m */,
+				96CB64BE1E7B1302001BB284 /* Annotation.m */,
+				96CB64C01E7B1343001BB284 /* Annotation.h */,
+				96CB64A21E7B0DD3001BB284 /* Main.storyboard */,
+				96CB64A51E7B0DD3001BB284 /* Images.xcassets */,
+				96CB64A71E7B0DD3001BB284 /* LaunchScreen.xib */,
+				96CB64981E7B0DD3001BB284 /* Supporting Files */,
+			);
+			path = RoadDetector;
+			sourceTree = "<group>";
+		};
+		96CB64981E7B0DD3001BB284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96CB64991E7B0DD3001BB284 /* Info.plist */,
+				96CB649A1E7B0DD3001BB284 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96CB64B11E7B0DD3001BB284 /* RoadDetectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB64B41E7B0DD3001BB284 /* RoadDetectorTests.m */,
+				96CB64B21E7B0DD3001BB284 /* Supporting Files */,
+			);
+			path = RoadDetectorTests;
+			sourceTree = "<group>";
+		};
+		96CB64B21E7B0DD3001BB284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96CB64B31E7B0DD3001BB284 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CB64941E7B0DD3001BB284 /* RoadDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB64B81E7B0DD3001BB284 /* Build configuration list for PBXNativeTarget "RoadDetector" */;
+			buildPhases = (
+				96CB64911E7B0DD3001BB284 /* Sources */,
+				96CB64921E7B0DD3001BB284 /* Frameworks */,
+				96CB64931E7B0DD3001BB284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadDetector;
+			productName = RoadDetector;
+			productReference = 96CB64951E7B0DD3001BB284 /* RoadDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96CB64AD1E7B0DD3001BB284 /* RoadDetectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB64BB1E7B0DD3001BB284 /* Build configuration list for PBXNativeTarget "RoadDetectorTests" */;
+			buildPhases = (
+				96CB64AA1E7B0DD3001BB284 /* Sources */,
+				96CB64AB1E7B0DD3001BB284 /* Frameworks */,
+				96CB64AC1E7B0DD3001BB284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB64B01E7B0DD3001BB284 /* PBXTargetDependency */,
+			);
+			name = RoadDetectorTests;
+			productName = RoadDetectorTests;
+			productReference = 96CB64AE1E7B0DD3001BB284 /* RoadDetectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96CB648D1E7B0DD3001BB284 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = nisak0503;
+				TargetAttributes = {
+					96CB64941E7B0DD3001BB284 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					96CB64AD1E7B0DD3001BB284 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 96CB64941E7B0DD3001BB284;
+					};
+				};
+			};
+			buildConfigurationList = 96CB64901E7B0DD3001BB284 /* Build configuration list for PBXProject "RoadDetector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96CB648C1E7B0DD3001BB284;
+			productRefGroup = 96CB64961E7B0DD3001BB284 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CB64941E7B0DD3001BB284 /* RoadDetector */,
+				96CB64AD1E7B0DD3001BB284 /* RoadDetectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CB64931E7B0DD3001BB284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB64A41E7B0DD3001BB284 /* Main.storyboard in Resources */,
+				96CB64A91E7B0DD3001BB284 /* LaunchScreen.xib in Resources */,
+				96CB64A61E7B0DD3001BB284 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB64AC1E7B0DD3001BB284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CB64911E7B0DD3001BB284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB64A11E7B0DD3001BB284 /* ViewController.m in Sources */,
+				96CB649E1E7B0DD3001BB284 /* AppDelegate.m in Sources */,
+				96CB64BF1E7B1302001BB284 /* Annotation.m in Sources */,
+				96CB649B1E7B0DD3001BB284 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB64AA1E7B0DD3001BB284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB64B51E7B0DD3001BB284 /* RoadDetectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96CB64B01E7B0DD3001BB284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB64941E7B0DD3001BB284 /* RoadDetector */;
+			targetProxy = 96CB64AF1E7B0DD3001BB284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96CB64A21E7B0DD3001BB284 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB64A31E7B0DD3001BB284 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96CB64A71E7B0DD3001BB284 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB64A81E7B0DD3001BB284 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CB64B61E7B0DD3001BB284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96CB64B71E7B0DD3001BB284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CB64B91E7B0DD3001BB284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RoadDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96CB64BA1E7B0DD3001BB284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RoadDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96CB64BC1E7B0DD3001BB284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RoadDetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoadDetector.app/RoadDetector";
+			};
+			name = Debug;
+		};
+		96CB64BD1E7B0DD3001BB284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RoadDetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoadDetector.app/RoadDetector";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CB64901E7B0DD3001BB284 /* Build configuration list for PBXProject "RoadDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB64B61E7B0DD3001BB284 /* Debug */,
+				96CB64B71E7B0DD3001BB284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB64B81E7B0DD3001BB284 /* Build configuration list for PBXNativeTarget "RoadDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB64B91E7B0DD3001BB284 /* Debug */,
+				96CB64BA1E7B0DD3001BB284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96CB64BB1E7B0DD3001BB284 /* Build configuration list for PBXNativeTarget "RoadDetectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB64BC1E7B0DD3001BB284 /* Debug */,
+				96CB64BD1E7B0DD3001BB284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96CB648D1E7B0DD3001BB284 /* Project object */;
+}
