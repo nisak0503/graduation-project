@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface ViewController : UIViewController
-
-
+@property (nonatomic, strong) CMMotionManager *motionManager;
+@property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, assign) CGPoint *virtualBall;
 @end
 

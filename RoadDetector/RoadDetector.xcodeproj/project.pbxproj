@@ -15,6 +15,7 @@
 		96CB64A91E7B0DD3001BB284 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CB64A71E7B0DD3001BB284 /* LaunchScreen.xib */; };
 		96CB64B51E7B0DD3001BB284 /* RoadDetectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB64B41E7B0DD3001BB284 /* RoadDetectorTests.m */; };
 		96CB64BF1E7B1302001BB284 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB64BE1E7B1302001BB284 /* Annotation.m */; };
+		96DB31C81E7EB3C500148297 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB31C71E7EB3C500148297 /* FileHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		96CB64B41E7B0DD3001BB284 /* RoadDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoadDetectorTests.m; sourceTree = "<group>"; };
 		96CB64BE1E7B1302001BB284 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		96CB64C01E7B1343001BB284 /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		96DB31C71E7EB3C500148297 /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHandler.m; sourceTree = "<group>"; };
+		96DB31C91E7EB42700148297 /* FileHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				96CB649D1E7B0DD3001BB284 /* AppDelegate.m */,
 				96CB649F1E7B0DD3001BB284 /* ViewController.h */,
 				96CB64A01E7B0DD3001BB284 /* ViewController.m */,
+				96DB31C71E7EB3C500148297 /* FileHandler.m */,
+				96DB31C91E7EB42700148297 /* FileHandler.h */,
 				96CB64BE1E7B1302001BB284 /* Annotation.m */,
 				96CB64C01E7B1343001BB284 /* Annotation.h */,
 				96CB64A21E7B0DD3001BB284 /* Main.storyboard */,
@@ -173,6 +178,7 @@
 				TargetAttributes = {
 					96CB64941E7B0DD3001BB284 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = C828LU6DWP;
 					};
 					96CB64AD1E7B0DD3001BB284 = {
 						CreatedOnToolsVersion = 6.4;
@@ -226,6 +232,7 @@
 			files = (
 				96CB64A11E7B0DD3001BB284 /* ViewController.m in Sources */,
 				96CB649E1E7B0DD3001BB284 /* AppDelegate.m in Sources */,
+				96DB31C81E7EB3C500148297 /* FileHandler.m in Sources */,
 				96CB64BF1E7B1302001BB284 /* Annotation.m in Sources */,
 				96CB649B1E7B0DD3001BB284 /* main.m in Sources */,
 			);
@@ -353,8 +360,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C828LU6DWP;
 				INFOPLIST_FILE = RoadDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.epcc.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -363,8 +373,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C828LU6DWP;
 				INFOPLIST_FILE = RoadDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.epcc.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -422,6 +435,7 @@
 				96CB64BA1E7B0DD3001BB284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CB64BB1E7B0DD3001BB284 /* Build configuration list for PBXNativeTarget "RoadDetectorTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +444,7 @@
 				96CB64BD1E7B0DD3001BB284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
