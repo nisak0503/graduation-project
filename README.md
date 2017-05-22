@@ -13,3 +13,4 @@ These bugs are...
 
 To Be Fixed!
 
+by nisak
