@@ -12,7 +12,7 @@ import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UITextViewDelegate{
 
-    
+    var locationLabelUpdate:Bool = true
     /* func viewDidLoad
      * 一开始加载结束就做的事情
      * ViewController自带的函数
@@ -32,6 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
          */
         initAddress()
         self.loadHazards()
+        locationLabelUpdate = true;
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -97,11 +98,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var fromAddressString: String = ""
     var toAddressString: String = ""
-    var fromCoordinate = CLLocationCoordinate2D();
-    var toCoordinate = CLLocationCoordinate2D();
+    var fromCoordinate = CLLocationCoordinate2D()
+    var toCoordinate = CLLocationCoordinate2D()
     var changedFrom = false
     var changedTo = false
-
+    
     
     /* func initAddress
      * 初始化目的地始发地文本框信息 的主入口
@@ -151,7 +152,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     /* func locationEncode
      * 给定地址字符串，获得经纬度信息
      */
-    
+
+    var currentTask = Task()
     func locationEncode(address:String, isFrom: Bool){
         print("trying to locate \(address)")
         //let annotation = Hazard(latitude: 0.0, longitude: 0.0, title: "")
@@ -169,6 +171,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     + "纬度：\(p.location!.coordinate.latitude)")
                 
                 let annotation = Hazard(latitude: p.location!.coordinate.latitude, longitude: p.location!.coordinate.longitude, title: address)
+                
+                if (isFrom == true){
+                    if(self.currentTask.sourceHistory){
+                        self.mapView.removeAnnotation(self.currentTask.source)
+                        // route delete
+                        for r in 0..<self.currentTask.routes.count{
+                            let route = self.currentTask.routes[r]
+                            self.mapView.remove(route.polyline)
+                        }
+                    }
+                    self.currentTask.setSource(source: annotation)
+                }
+                else
+                {
+                    if(self.currentTask.destinationHistory){
+                        self.mapView.removeAnnotation(self.currentTask.destination)
+                        // route delete
+                        for r in 0..<self.currentTask.routes.count{
+                            let route = self.currentTask.routes[r]
+                            self.mapView.remove(route.polyline)
+                        }
+                        
+                    }
+                    self.currentTask.setDestination(destination: annotation)
+                }
+                
                 self.mapView.addAnnotation(annotation)
                 
                 let latDelta = 0.003
@@ -180,8 +208,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 //设置显示区域
                 self.mapView.setRegion(currentRegion, animated: true)
                 
-                
-                
+                //print("GET CURRENT CENTER OK! \(center.coordinate.latitude) and \(center.coordinate.longitude)");
+                self.locationLabelUpdate = true;
+                self.getLocationLabel(currentLocation: center);
+                self.locationLabelUpdate = false
+
                 print("this is annotation: \(annotation.latitude)")
                 
                 //当前填写的是起始位置
@@ -348,6 +379,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var minHaz = Int.max
     var minRoute = MKRoute()
     var routes: [MKRoute] = []
+    
+    var tasks: [Task] = []
+    
     func showRoute(response:MKDirectionsResponse) {
         var maxDistance = 0.0
         for route in response.routes{
@@ -363,13 +397,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             .longitude)/2)
         let currentRegion:MKCoordinateRegion = MKCoordinateRegion(center: center.coordinate, span: currentLocationSpan)
         
+        
         //设置显示区域
         self.mapView.setRegion(currentRegion, animated: true)
         //self.mapView.setCenter(center, animated: true)
         
+        
+        self.locationLabelUpdate = true
+        self.getLocationLabel(currentLocation: center)
+        self.locationLabelUpdate = false
+        
         minHaz = Int.max
         minRoute = MKRoute()
         routes = response.routes
+        self.currentTask.setRoutes(routes: routes)
+        
         for r in 0 ..< response.routes.count{
             let route = response.routes[r]
         
@@ -462,6 +504,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func getLocationLabel(currentLocation: CLLocation){
         
+        if(locationLabelUpdate == false)
+        {
+            return
+        }
         let geocoder: CLGeocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(currentLocation) {(placemark, error) -> Void in
             if (error == nil) {//转换成功，解析获取到的各个信息
@@ -645,7 +691,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var i = 0
             for item in items {
                 i = i + 1
-                print("\(item)")
+                //print("\(item)")
                 //                let lat = item.valueForKey("fadf")
                 //
                 let lat = (item as! NSDictionary).value(forKey: "lat") as! Double
@@ -676,7 +722,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 }
 
 
-
+class Task: NSObject {
+    var source: MKAnnotation
+    var destination: MKAnnotation
+    var routes: [MKRoute]
+    
+    var sourceHistory: Bool = false
+    var destinationHistory: Bool = false
+    init(source: MKAnnotation, destination: MKAnnotation){
+        self.source = source
+        self.destination = destination
+        self.routes = [MKRoute]()
+        sourceHistory = true
+        destinationHistory = true
+    }
+    override init(){
+        self.source = Hazard(latitude: 0.0, longitude: 0.0, title: "")
+        self.destination = Hazard(latitude: 0.0, longitude: 0.0, title: "")
+        self.routes = [MKRoute]()
+    }
+    func setRoutes(routes: [MKRoute])
+    {
+        self.routes = routes
+    }
+    func setSource(source: MKAnnotation)
+    {
+        self.source = source
+        sourceHistory = true
+    }
+    func setDestination(destination: MKAnnotation)
+    {
+        self.destination = destination
+        destinationHistory = true
+    }
+    
+}
 
 class Hazard: NSObject, MKAnnotation {
     var title: String?

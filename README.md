@@ -13,4 +13,10 @@ These bugs are...
 
 To Be Fixed!
 
+July 7th
+Fixed 1st one already in June.
+
+
+Today, I'm going to check and hand my code in.
+
 by nisak
