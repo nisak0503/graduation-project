@@ -36,8 +36,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-V5-8Jl">
-                                <rect key="frame" x="13" y="33" width="59" height="30"/>
-                                <state key="normal" title="navigate"/>
+                                <rect key="frame" x="13" y="33" width="88" height="30"/>
+                                <state key="normal" title="viewHazards"/>
                                 <connections>
                                     <action selector="uploadAnnotations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxg-Jt-3eI"/>
                                 </connections>
