@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		9610429E1EBF1BE300799789 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9610429D1EBF1BE300799789 /* LoginViewController.swift */; };
 		961042A01EBF693300799789 /* annotations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9610429F1EBF693300799789 /* annotations.plist */; };
-		961042A21EC019FF00799789 /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961042A11EC019FF00799789 /* NavigateViewController.swift */; };
+		9661E2A31F0FB25900589B21 /* Hazard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661E2A21F0FB25900589B21 /* Hazard.swift */; };
+		9661E2A51F0FB40300589B21 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661E2A41F0FB40300589B21 /* Task.swift */; };
+		9661E2AB1F0FD36D00589B21 /* HazardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661E2AA1F0FD36D00589B21 /* HazardManager.swift */; };
 		96AE1F131EAF5121009E3210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE1F121EAF5121009E3210 /* AppDelegate.swift */; };
 		96AE1F151EAF5121009E3210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE1F141EAF5121009E3210 /* ViewController.swift */; };
 		96AE1F181EAF5121009E3210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE1F161EAF5121009E3210 /* Main.storyboard */; };
@@ -40,7 +42,9 @@
 /* Begin PBXFileReference section */
 		9610429D1EBF1BE300799789 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9610429F1EBF693300799789 /* annotations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = annotations.plist; path = BetterRoad/annotations.plist; sourceTree = "<group>"; };
-		961042A11EC019FF00799789 /* NavigateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigateViewController.swift; sourceTree = "<group>"; };
+		9661E2A21F0FB25900589B21 /* Hazard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hazard.swift; sourceTree = "<group>"; };
+		9661E2A41F0FB40300589B21 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9661E2AA1F0FD36D00589B21 /* HazardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HazardManager.swift; sourceTree = "<group>"; };
 		96AE1F0F1EAF5121009E3210 /* BetterRoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterRoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AE1F121EAF5121009E3210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96AE1F141EAF5121009E3210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				9610429D1EBF1BE300799789 /* LoginViewController.swift */,
-				961042A11EC019FF00799789 /* NavigateViewController.swift */,
 				96AE1F141EAF5121009E3210 /* ViewController.swift */,
 				96AE1F161EAF5121009E3210 /* Main.storyboard */,
+				9661E2A21F0FB25900589B21 /* Hazard.swift */,
+				9661E2AA1F0FD36D00589B21 /* HazardManager.swift */,
+				9661E2A41F0FB40300589B21 /* Task.swift */,
 				96AE1F431EAF515D009E3210 /* Supporting Files */,
 			);
 			path = BetterRoad;
@@ -283,11 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9661E2AB1F0FD36D00589B21 /* HazardManager.swift in Sources */,
 				9610429E1EBF1BE300799789 /* LoginViewController.swift in Sources */,
 				96AE1F151EAF5121009E3210 /* ViewController.swift in Sources */,
 				96AE1F131EAF5121009E3210 /* AppDelegate.swift in Sources */,
-				961042A21EC019FF00799789 /* NavigateViewController.swift in Sources */,
 				96AE1F1B1EAF5121009E3210 /* BetterRoad.xcdatamodeld in Sources */,
+				9661E2A51F0FB40300589B21 /* Task.swift in Sources */,
+				9661E2A31F0FB25900589B21 /* Hazard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,6 @@
 //  Copyright © 2017年 sjtuepcc. All rights reserved.
 //
 
-// TO BE CONTINUED
-// LOGIN VIEW, collect user name and other information
-// to recognize vip user from all
-
 import UIKit
 import MapKit
 
